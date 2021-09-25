@@ -1,0 +1,90 @@
+Nombre,CaballosFuerza,Precio,Familiar
+Honda Civic,52,11500,1
+Merc 240D,62,11900,1
+Ford Festiva 4,63,6319,1
+Toyota Corolla,65,17872,1
+Fiat 128,66,3470,1
+Fiat X1-9,66,9640,1
+Subaru Justy 3,73,5866,1
+Pontiac LeMans 4,74,7254,1
+Toyota Tercel 4,78,6488,1
+Mercury Tracer 4,82,8672,1
+Ford Escort   4,90,7402,1
+Nissan Sentra 4,90,7399,1
+Subaru Loyale 4,90,9599,1
+Porsche 914-2,91,27500,0
+Honda Civic 4,92,6635,1
+Plymouth Laser,92,10855,1
+Datsun 710,93,4059,1
+Chevrolet Beretta 4,95,10320,0
+Toyota Corona,97,14995,1
+Subaru XT 4,97,13071,1
+Ford Tempo 4,98,9483,0
+Volkswagen Jetta 4,100,9995,1
+Dodge Daytona,100,9745,1
+Toyota Corolla 4,102,8748,1
+Mitsubishi Galant 4,102,10989,0
+Mazda Protege 4,103,6599,1
+Valiant,105,24950,1
+Nissan Van 4,106,14799,0
+Mitsubishi Wagon 4,107,14929,0
+Honda Civic CRX Si 4,108,9410,1
+Audi 80 4,108,18900,0
+Volvo 142E,109,17500,1
+Mazda RX4,110,3470,1
+Mazda RX4 Wag,110,4697,1
+Fiat 128,110,3470,1
+Ford Probe,110,11470,1
+Buick Skylark 4,110,10565,0
+Mazda 626 4,110,12459,0
+Oldsmobile Calais 4,110,9995,0
+Buick Century 4,110,13150,0
+Hyundai Sonata 4,110,9999,0
+Oldsmobile Cutlass Ciera 4,110,13150,0
+Chevrolet Lumina APV V6,110,13995,0
+Lotus Europa,113,49000,0
+Eagle Summit 4,113,8895,1
+Volvo 240 4,114,18450,0
+Toyota Camry 4,115,11588,0
+Peugeot 405 4,120,15930,0
+Merc 280,123,14977,1
+Merc 280C,123,13800,1
+Honda Accord 4,125,12145,0
+Subaru Legacy 4,130,11499,0
+Oldsmobile Cutlass Supreme V6,135,14495,0
+Nissan Stanza 4,138,11650,0
+Nissan Axxess 4,138,13949,0
+Honda Prelude Si 4WS 4,140,13945,1
+Nissan 240SX 4,140,13249,1
+Ford Taurus V6,140,13195,0
+Ford Thunderbird V6,140,14980,0
+Chrysler Le Baron V6,141,10945,0
+Mitsubishi Sigma V6,142,17879,0
+Ford Aerostar V6,145,12267,0
+Chrysler New Yorker V6,147,16342,0
+AMC Javelin,150,19900,0
+Dodge Challenger,150,54900,0
+Chrysler Le Baron Coupe,150,12495,0
+Eagle Premier V6,150,15350,0
+Ford LTD Crown Victoria V8,150,17257,0
+Dodge Grand Caravan V6,150,15395,0
+Mazda MPV V6,150,14944,0
+Mazda 929 V6,158,23300,0
+Acura Legend V6,160,24760,0
+Nissan Maxima V6,160,17899,0
+Buick Le Sabre V6,165,16145,0
+Chevrolet Camaro V8,170,11545,0
+Chevrolet Caprice V8,170,14525,0
+Pontiac Firebird,175,19900,0
+Ferrari Dino,175,96500,0
+Hornet Sportabout,175,13595,0
+Merc 450SLC,180,18595,0
+Merc 450SE,180,11312,0
+Merc 450SL,180,2500,0
+Toyota Cressida 6,190,21498,0
+Cadillac Fleetwood,205,6900,0
+Lincoln Continental,215,58900,0
+Ford Mustang V8,225,12164,0
+Chrysler Imperial,230,9750,0
+Duster 360,245,34500,0
+Camaro Z28,245,14500,0
