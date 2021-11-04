@@ -1,0 +1,15 @@
+Dia,Pronóstico,Temperatura,Humedad,Viento,Jugar_tennis
+D1,Soleado,Caliente,Alta,Debil,No
+D2,Soleado,Caliente,Alta,Fuerte,No
+D3,Nublado,Caliente,Alta,Debil,Si
+D4,Lluvioso,Leve,Alta,Debil,Si
+D5,Lluvioso,Frio,Normal,Debil,Si
+D6,Lluvioso,Frio,Normal,Fuerte,No
+D7,Nublado,Frio,Normal,Fuerte,Si
+D8,Soleado,Leve,Alta,Debil,No
+D9,Soleado,Frio,Normal,Debil,Si
+D10,Lluvioso,Leve,Normal,Debil,Si
+D11,Soleado,Leve,Normal,Fuerte,Si
+D12,Nublado,Leve,Alta,Fuerte,Si
+D13,Nublado,Caliente,Normal,Debil,Si
+D14,Lluvioso,Leve,Alta,Fuerte,No
