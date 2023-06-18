@@ -1,0 +1,118 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |
+    **Enunciado del problema**
+    --------------------------
+
+    Escriba un programa que tome un solo argumento entero "altura" y muestre una "pirámide" de esta altura compuesta por "*" caracteres en la pantalla.
+
+    *Entradas*
+    ^^^^^^^^^^
+
+    .. class:: text-justify
+
+        Su programa deberá leer un número **cin >>** ingresado por el teclado.
+
+    |
+
+    *Salidas*
+    ^^^^^^^^^
+
+    La salida debera mostrar la piramide con la altura indicada
+
+    |
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 1*
+
+            ::
+
+                4
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 1*
+
+            ::
+
+                 **
+                ****
+               ******
+              ********
+
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 2*
+
+            ::
+
+                8
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 2*
+
+            ::
+
+                     **
+                    ****
+                   ******
+                  ********
+                 **********
+                ************
+               **************
+              ****************
+
+    |
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: 005dowhile
+grader_test_cases:
+-   weight: 1.0
+    input_file: 1.in
+    diff_shown: true
+    output_file: 1.out
+-   weight: 1.0
+    input_file: 2.in
+    output_file: 2.out
+    diff_shown: false
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Ejercicio 04 - Repaso Do-While
+network_grading: false
+order: 6
+problems:
+    005dowhile:
+        type: code_file_multiple_languages
+        header: ''
+        languages:
+            cpp: cpp
+        name: ''
+        allowed_exts:
+        - .zip
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

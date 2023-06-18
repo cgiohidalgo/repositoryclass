@@ -1,0 +1,169 @@
+<ul><li>accessible: False</li><li>author: Ángel E. García Baños</li><li>context: .. raw:: html
+
+    &lt;style&gt; .help {color:#808000;} &lt;/style&gt;
+
+.. role:: help
+
+.. class:: text-justify
+
+**Objetivos de aprendizaje**
+
+• Estilo correcto
+• Documentación
+• Depuración
+
+.. class:: text-justify
+
+**Enunciado**
+
+Hacer una mudanza en dos camiones (una clase y dos objetos): Vamos a modelar un camión para transportar mis objetos, que tienen distintos pesos. El camión tiene un número de placa y una capacidad máxima. Si se supera esa capacidad, el programa me avisará, para que el objeto que intento subir lo guarde en el otro camión.
+
+.. class:: text-justify
+
+**Tarea**
+
+
+Revise el programa que se le entrega (abajo), busque los defectos que tenga y corríjalos. Recuerde que ustede debe entregar un programa usando el Paradigma Orientado a Objetos
+
+.. code-block:: c++
+
+    #include &lt;iostream&gt;
+    using namespace std;
+
+    class Camion
+    {
+      private:
+        string pl;
+        int cm;
+        int ptc;
+
+      public:
+        Camion(string laPlaca, int laCapacidadMaxima);
+        bool cargarUnObjeto(int pesoDelObjeto);  // true = se pudo hacer; false = no se pudo
+        int hacerMudanza();  // Retorna la carga que transportó
+        string cualEsLaPlaca();
+    }
+
+    Camion::Camion(string laPlaca, int laCapacidadMaxima)
+    {
+      pl = laPlaca;  cm = laCapacidadMaxima;   ptc = 0; }
+
+    bool Camion::cargarUnObjeto(int pesoDelObjeto) {
+      if(ptc + pesoDelObjeto &lt;= cm) {
+        ptc = ptc - pesoDelObjeto;
+      return true;}else return false;
+                                    }
+
+    int Camion::hacerMudanza() {  return ptc; } string Camion::cualEsLaPlaca() {  return pl; }
+
+    int Main()
+    {
+      Camion unCamion(&quot;ABC-001&quot;, 10000)
+      Camion otroCamion(&quot;DEF-002&quot;, 5000);
+
+      int objetos[8] =
+      {
+        1000, 3000, 5000, 2000, 500, 1800, 4000, 30
+      };
+
+      for(int cualObjeto = 0; cualObjeto &lt; 8; cualObjeto++)
+      {
+        int objetoATransportar = objetos[cualObjeto];
+        if(not unCamion.cargarUnObjeto(objetoATransportar))
+          if(not otroCamion.cargarUnObjeto(objetoATransportar))
+            cout &lt;&lt; &quot;El objeto número &quot; &lt;&lt; cualObjeto &lt;&lt; &quot; que pesa &quot; &lt;&lt; objetos[cualObjeto] &lt;&lt; &quot; no se puede cargar en ningún camión.&quot; &lt;&lt; endl;
+      }
+
+      cout &lt;&lt; &quot;El camión &quot; &lt;&lt; unCamion.cualEsLaPlaca() &lt;&lt; &quot; transportó &quot; &lt;&lt; unCamion.hacerMudanza() &lt;&lt; &quot; kg.&quot; &lt;&lt; endl;
+      cout &lt;&lt; &quot;El camión &quot; &lt;&lt; otroCamion.cualEsLaPlaca() &lt;&lt; &quot; transportó &quot; &lt;&lt; otroCamion.hacerMudanza() &lt;&lt; &quot; kg.&quot; &lt;&lt; endl;
+
+      return 0;
+    }
+
+.. class:: text-justify
+
+
+
+
+**¿Qué se evalua?**
+
+.. raw:: html
+
+    &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;ESTILO (65%):&amp;nbsp;&lt;/strong&gt;
+    &lt;ul&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt;ARCHIVOS_SOLICITADOS (5%)&lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Están todos los archivos solicitados?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt;CLASE_EN_DOS_ARCHIVOS (10%)&lt;/span&gt;&amp;nbsp;&lt;/strong&gt;  ¿Cada clase está separada en dos archivos .h y .cpp?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; NOMBRE_CLASE_Y_ARCHIVO (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿El nombre de la clase coincide con el archivo donde está y el archivo comienza por letra mayúscula?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; COMENTARIO_CABECERA (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Tienen todos los archivos las cabeceras exigidas (autor, email, fecha)?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; COMENTARIO_CLASE (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Los archivos .h tienen los comentarios de CLASE, INTENCIÓN y RELACIONES?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; COMENTARIO_FUNCION (5%)  &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Cada función va precedida de un comentario /** ... */ ?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; COMENTARIO_HISTORIA/PROPOSITO (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿En el programa principal hay un comentario que cuenta una historia?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; UNA_SENTENCIA_POR_LINEA (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿En cada línea hay una sola sentencia?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; LLAVES (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Están las llaves{} adecuadamente puestas para agrupar código y alineadas en la misma vertical?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; INDENTACION (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿El código dentro de las llaves está indentado 2 espacios hacia la derecha ?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; BUENOS_NOMBRES (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Los nombres de las variables, clases, objetos y funciones se entienden?&amp;nbsp;&lt;/li&gt;
+    &lt;li&gt; &lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; LETRA_INICIAL (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Las clases comienzan por letra mayúscula y el resto por letra minúscula?&amp;nbsp;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;PROGRAMACIÓN (15%):&amp;nbsp;&lt;/strong&gt;
+    &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; ORIENTADO_OBJETOS (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Se respeta la encapsulación? &lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; GUARDA (5%) &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Existen las guardas en los archivos .h y son correctas?  &lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; INCLUDES (5%)  &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Están puestos los #include necesarios y en los lugares adecuados?  &lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; ALGORITMO (0%)  &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; La calidad del algoritmo no la voy a evaluar en este laboratorio, pues se lo doy hecho.  &lt;/li&gt;
+
+
+
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;COMPILACIÓN (5%):&amp;nbsp;&lt;/strong&gt;
+    &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; COMPILAR (5%)  &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Compila sin errores ni warnings? En caso de que haya warnings intente eliminarlos también &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;EJECUCIÓN (15%):&amp;nbsp;&lt;/strong&gt;
+    &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; EJECUTAR (5%)  &lt;/span&gt;&amp;nbsp;&lt;/strong&gt;  ¿Se puede ejecutar sin problemas?&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; BLOQUEO (5%)  &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Se bloquea el programa con las entradas especificadas?&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; RESULTADOS (5%)  &lt;/span&gt;&amp;nbsp;&lt;/strong&gt; ¿Da los resultados esperados (ensaye con varias entradas)? &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+
+
+|
+
+**Casos de prueba**
+-------------------
+
+
+.. container:: row
+
+    .. container:: col-md-6 text-justify
+
+        *Entradas*
+
+        ::
+
+            para este ejercicio
+            no hay datos
+            de entrada
+
+    .. container:: col-md-6 text-justify
+
+        *Salidas*
+
+        ::
+
+            El objeto número 6 que pesa 4000 no se puede cargar en ningún camión.
+            El camión ABC-001 transportó 9530 kg.
+            El camión DEF-002 transportó 3800 kg.
+
+|
+
+.. raw:: html
+
+    &lt;strong&gt;Nota: &lt;/strong&gt; &lt;p&gt;&lt;em&gt;&lt;span style=&quot;color: #800000;&quot;&gt;Finalice el &amp;uacute;ltimo &quot;cout&quot; con &quot;endl&quot; para generar un salto de l&amp;iacute;nea, de lo contrario puede recibir el veredicto de respuesta incorrecta.&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+
+</li><li>environment: multiple_languages</li><li>evaluate: best</li><li>generate_grader: True</li><li>grader_diff_context_lines: 3</li><li>grader_diff_max_lines: 100</li><li>grader_problem_id: lab01</li><li>grader_test_cases: <ol><li><ul><li>weight: 1.0</li><li>diff_shown: True</li><li>input_file: 1.in</li><li>output_file: 1.out</li></ul></li></ol></li><li>groups: False</li><li>input_random: 0</li><li>limits: <ul><li>output: 2</li><li>time: 30</li><li>memory: 100</li></ul></li><li>name: Laboratorio 1</li><li>network_grading: False</li><li>order: 11</li><li>problems: <ul><li>lab01: <ul><li>languages: <ul><li>cpp: cpp</li></ul></li><li>type: code_file_multiple_languages</li><li>allowed_exts: <ol><li>.zip</li></ol></li><li>header: </li><li>name: </li></ul></li></ul></li><li>stored_submissions: 0</li><li>submission_limit: <ul><li>amount: -1</li><li>period: -1</li></ul></li><li>tags: <ul></ul></li><li>treat_non_zero_as_runtime_error: False</li><li>vhdl_entity: </li><li>weight: 1.0</li></ul>

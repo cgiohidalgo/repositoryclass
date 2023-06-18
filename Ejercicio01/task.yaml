@@ -1,0 +1,82 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |+
+    .. class:: text-justify
+
+    Enunciado del problema
+    --------------------------
+
+    .. class:: text-justify
+
+    Juanita compra una bicicleta,  recorre 20 km y luego se la presta a Ana. Ana  recorre 10 km con la bicicleta, pero al final se le pincha y se la devuelve a Juanita. Juanita  tiene que despincharla.
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada*
+
+            ::
+
+                   para este ejercicio
+                   no hay datos de entrada
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida*
+
+            ::
+
+                    Juanita compró bicicleta nueva.
+                    Juanita recorre 20 km.
+                    Juanita le presta su bicicleta a Ana
+                    Ana recorre 10 km.
+                    La bicicleta está pinchada
+                    Ana devuelve la bicicleta a Juanita
+                    Juanita tiene que despichar su bicicleta
+                    Se puede usar la bicicleta nuevamente. Ya está despinchada
+
+
+    **Finalice el último "cout" (El área del triángulo es:) con "endl" para generar un salto de línea, de lo contrario puede recibir el veredicto de respuesta incorrecta.**
+
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: uno
+grader_test_cases:
+-   weight: 1.0
+    input_file: 1.in
+    diff_shown: true
+    output_file: 1.out
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    memory: '100'
+    time: '30'
+name: Ejercicio 01 - Juanita y su bicicleta
+network_grading: false
+order: 3
+problems:
+    uno:
+        header: ''
+        allowed_exts:
+        - .zip
+        languages:
+            cpp: cpp
+        type: code_file_multiple_languages
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

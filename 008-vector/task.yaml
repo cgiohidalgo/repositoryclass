@@ -1,0 +1,147 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |
+    **Enunciado del problema**
+    --------------------------
+
+    Muestre una lista vertical dado la dimension de un vector.
+
+    *Entradas*
+    ^^^^^^^^^^
+
+    .. class:: text-justify
+
+        Su programa deberá leer un número **cin >>**, ingresados por el teclado.
+
+    |
+
+    *Salidas*
+    ^^^^^^^^^
+
+    La salida debera indicar **vector**
+
+    |
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 1*
+
+            ::
+
+                4
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 1*
+
+            ::
+
+                0
+                1
+                2
+                3
+
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 2*
+
+            ::
+
+                6
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 2*
+
+            ::
+
+                0
+                1
+                2
+                3
+                4
+                5
+
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 3*
+
+            ::
+
+                9
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 3*
+
+            ::
+
+                0
+                1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+
+    |
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: 008-vector
+grader_test_cases:
+-   output_file: 3.out
+    weight: 1.0
+    input_file: 3.in
+    diff_shown: false
+-   weight: 1.0
+    input_file: 2.in
+    output_file: 2.out
+    diff_shown: false
+-   diff_shown: true
+    weight: 1.0
+    input_file: 1.in
+    output_file: 1.out
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Ejercicio 07 - Número de vectores
+network_grading: false
+order: 9
+problems:
+    008-vector:
+        allowed_exts:
+        - .zip
+        languages:
+            cpp: cpp
+        header: ''
+        type: code_file_multiple_languages
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

@@ -1,0 +1,179 @@
+<ul><li>accessible: False</li><li>author: </li><li>context: .. raw:: html
+
+    &lt;style&gt; .help {color:#808000;} &lt;/style&gt;
+
+.. role:: help
+
+.. class:: text-justify
+
+**Objetivos de aprendizaje**
+
+• Biblioteca estándar
+• Relación “contiene”
+• Refactorizar
+
+
+.. class:: text-justify
+
+**Enunciado**
+
+Lo ideal del programa principal (main) es que construya los objetos y active las primeras órdenes. Entonces, cuando hay demasiados algoritmos en el programa principal, es un indicador de que necesitamos diseñar más clases, para llevar allí esos algoritmos.
+El objetivo es dejar main() mucho más simple, sin ningún algoritmo (for, if, etc) en él.
+
+Tomaremos la solución al Taller 1 y la mejoraremos. Para ello vamos a crear la clase **EmpresaDeMudanza**. Esa empresa debe tener un nombre, un nit (string) y **una flota (vector) de Camiones**, inicialmente vacía. Después de construir la empresa, se le puede dar órdenes para que **compre** varios Camiones. Y después ya puede hacer la **mudanza** del Taller 1. En resumen:
+
+.. class:: text-justify
+
+**Requerimientos**
+
+• No modifique la clase Camion.
+• Añada la clase EmpresaDeMudanza, generalizando el problema, usando un vector de Camiones, donde primero se lleva cada objeto al primer camión, y si no cabe se intenta con el segundo, y si no cabe, se intenta con el tercero, etc.
+• En EmpresaDeMudanza.h ponga lo siguiente en el comentario de la clase (luego entenderá por qué): **RELACIONES: contiene Camiones**
+• Lo único que nos interesa saber después de hacer la mudanza es el total de peso transportado, que debe imprimirse en main().
+• En este laboratorio, solo se permite imprimir en pantalla desde main() y no desde ningún otro objeto.
+• Unos días después de entregar este trabajo, cada grupo tendrá que evaluar el código de otro grupo que yo le voy a suministrar, en un replit (por medio del campus virtual) donde pueden hacer mejoras al código del otro grupo y escribirlas en el archivo main(). Hacer una buena evaluación y mejoras influye un 10% en la nota del grupo evaluador (no influye en la nota del grupo evaluado).
+
+.. class:: text-justify
+
+**Tarea**
+
+Añada la clase EmpresaDeMudanza, generalizando el problema, usando un vector de Camiones, donde primero se lleva cada objeto al primer camión, y si no cabe se intenta con el segundo, y si no cabe, se intenta con el tercero, etc. Finalmente, calcular el total de peso transportado de la mudanza.
+
+
+.. code-block:: c++
+
+    #Camion.h
+
+    class Camion
+    {
+      private:
+      string placaCamion;
+      int capacidadMaxima;
+      int pesoTotalCargado;
+
+      public:
+      /**
+      Constructor. Variables iniciales a atributos internos.
+      */
+      Camion(string laPlaca, int laCapacidadMaxima);
+      /**
+      Evalua si puede cargar un objeto o no. Retorna 0 = false (No se puede hacer) y 1 = true (Se puede hacer).
+      */
+      bool cargarUnObjeto(int pesoDelObjeto);
+      /**
+      Hacer la mudanza. Retorna la carga que transporto.
+      */
+      int hacerMudanza();
+      /**
+      Saber cual es la placa del camion.
+      */
+      string cualEsLaPlaca();
+    };
+
+.. code-block:: c++
+
+    #Camion.cpp
+
+    Camion::Camion(string laPlaca, int laCapacidadMaxima)
+    {
+      placaCamion = laPlaca;
+      capacidadMaxima = laCapacidadMaxima;
+      pesoTotalCargado = 0;
+    }
+
+    bool Camion::cargarUnObjeto(int pesoDelObjeto)
+    {
+      if(pesoTotalCargado + pesoDelObjeto &lt;= capacidadMaxima)
+      {
+        pesoTotalCargado += pesoDelObjeto;
+        return true;
+      }
+      else
+        return false;
+    }
+
+    int Camion::hacerMudanza()
+    {
+      return pesoTotalCargado;
+    }
+
+    string Camion::cualEsLaPlaca()
+    {
+      return placaCamion;
+    }
+
+.. code-block:: c++
+
+    #main.cpp
+
+    int main()
+    {
+      vector &lt;int&gt; objetos =
+      {
+        1000, 3000, 5000, 2000, 500, 1800, 4000, 30
+      };
+
+      EmpresaDeMudanza nuevaEmpresa(&quot;Camiones Mountain&quot;, &quot;2498024-9&quot;);
+
+      nuevaEmpresa.comprarCamion(&quot;YUI-988&quot;, 10000);
+      nuevaEmpresa.comprarCamion(&quot;OIJ-807&quot;, 5000);
+      nuevaEmpresa.comprarCamion(&quot;KHO-193&quot;, 5000);
+
+      cout &lt;&lt; nuevaEmpresa.cargarLosCamiones(objetos) &lt;&lt; endl;
+
+      return 0;
+    }
+
+.. class:: text-justify
+
+
+
+
+**¿Qué se evalua?**
+
+.. raw:: html
+
+    &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;REQUERIMIENTOS (20%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;ESTILO (20%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;PROGRAMACIÓN (30%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;COMPILACIÓN (10%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;EJECUCIÓN (10%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;EVALUACIÓN DE PARES (10%):&amp;nbsp;&lt;/strong&gt;
+
+    &lt;/ul&gt;
+
+
+|
+
+**Casos de prueba**
+-------------------
+
+
+.. container:: row
+
+    .. container:: col-md-6 text-justify
+
+        *Entradas*
+
+        ::
+
+            para este ejercicio
+            no hay datos
+            de entrada
+
+    .. container:: col-md-6 text-justify
+
+        *Salidas*
+
+        ::
+
+            17330
+
+|
+
+.. raw:: html
+
+    &lt;strong&gt;Nota: &lt;/strong&gt; &lt;p&gt;&lt;em&gt;&lt;span style=&quot;color: #800000;&quot;&gt;Finalice el &amp;uacute;ltimo &quot;cout&quot; con &quot;endl&quot; para generar un salto de l&amp;iacute;nea, de lo contrario puede recibir el veredicto de respuesta incorrecta.&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+
+</li><li>environment: multiple_languages</li><li>evaluate: best</li><li>generate_grader: True</li><li>grader_diff_context_lines: 3</li><li>grader_diff_max_lines: 100</li><li>grader_problem_id: lab02</li><li>grader_test_cases: <ol><li><ul><li>weight: 1.0</li><li>diff_shown: True</li><li>input_file: 1.in</li><li>output_file: 1.out</li></ul></li></ol></li><li>groups: False</li><li>input_random: 0</li><li>limits: <ul><li>output: 2</li><li>memory: 100</li><li>time: 30</li></ul></li><li>name: Laboratorio 2</li><li>network_grading: False</li><li>order: 21</li><li>problems: <ul><li>lab02: <ul><li>name: </li><li>allowed_exts: <ol><li>.zip</li></ol></li><li>header: </li><li>languages: <ul><li>cpp: cpp</li></ul></li><li>type: code_file_multiple_languages</li></ul></li></ul></li><li>stored_submissions: 0</li><li>submission_limit: <ul><li>amount: -1</li><li>period: -1</li></ul></li><li>tags: <ul></ul></li><li>treat_non_zero_as_runtime_error: False</li><li>vhdl_entity: </li><li>weight: 1.0</li></ul>

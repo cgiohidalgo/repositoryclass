@@ -1,0 +1,10 @@
+#!/bin/python3
+
+from grading import graders
+
+problem_id = 'uno'
+test_cases = [('1.in', '1.out')]
+options = {'output_diff_for': ['1.in'], 'diff_context_lines': 3, 'treat_non_zero_as_runtime_error': False, 'diff_max_lines': 100}
+weights = [1.0]
+
+graders.handle_problem_action(problem_id, test_cases, options=options, weights=weights)

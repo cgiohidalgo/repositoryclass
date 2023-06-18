@@ -1,0 +1,138 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |-
+    **Enunciado del problema**
+    --------------------------
+
+    Un programa que pida tres valores (a,b,c), donde a y b seran los operandos y c el operador (1=suma, 2=resta, 3=multiplicación, 4=división).
+    |
+
+    *Entradas*
+    ^^^^^^^^^^
+
+    .. class:: text-justify
+
+        3 valores **cin >>**, ingresados por el teclado.
+
+    |
+
+    *Salidas*
+    ^^^^^^^^^
+
+    La operacion de dos valores a y b, dependiendo del operador: **cout <<**
+
+    |
+
+    NOTA
+    ^^^^^
+
+
+    |
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 1*
+
+            ::
+
+                5 3 1
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 1*
+
+            ::
+
+                8
+
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 2*
+
+            ::
+
+                3 3 4
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 2*
+
+            ::
+
+                1
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 2*
+
+            ::
+
+                7 4 2
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 2*
+
+            ::
+
+                ?
+
+    |
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: 003if
+grader_test_cases:
+-   output_file: 1.out
+    weight: 1.0
+    diff_shown: true
+    input_file: 1.in
+-   weight: 1.0
+    input_file: 3.in
+    output_file: 3.out
+    diff_shown: false
+-   weight: 1.0
+    input_file: 2.in
+    output_file: 2.out
+    diff_shown: false
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Ejercicio 02 - Repaso If
+network_grading: false
+order: 4
+problems:
+    003if:
+        languages:
+            cpp: cpp
+        allowed_exts:
+        - .zip
+        type: code_file_multiple_languages
+        name: ''
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

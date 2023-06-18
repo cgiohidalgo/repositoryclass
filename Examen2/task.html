@@ -1,0 +1,126 @@
+<ul><li>accessible: False</li><li>author: </li><li>context: .. raw:: html
+
+    &lt;style&gt; .help {color:#808000;} &lt;/style&gt;
+
+.. role:: help
+
+.. class:: text-justify
+
+    El mundo pequeño de Jenkins donde viven 2 tipos de personajes: 1: Arqueros y 2: Draconaurius. Lucharan en una batalla a muerte  para determinar quien se queda con el mundo (Arqueros vs Draconaurius). Estos dos poderosos ejercitos se conforman por 7 personajes cada uno en total. En el primer ejercito existen 2 super Arqueros++ y 5 Arqueros y en el segundo ejercito 5 super Draconaurius++ y 2 Draconaurius.
+
+Si uno de los ejercitos quiere ganar la batalla, debe tener en cuenta la vida y el daño de su adversario.
+
+|
+
+.. raw:: html
+
+   &lt;table style=&quot;width: 347px; margin-left: auto; margin-right: auto;
+   height: 137px;&quot; border=&quot;1&quot; cellspacing=&quot;1&quot; cellpadding=&quot;1&quot;&gt;
+   &lt;tr&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   &lt;b&gt;Personaje&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   &lt;b&gt;Vida&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   &lt;b&gt;Daño&lt;/b&gt;
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   Arqueros
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   4
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   3
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   Arqueros++
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   7
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   5
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   Draconaurius
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   2
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   1
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   Draconaurius++
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   3
+   &lt;/td&gt;
+   &lt;td style=&quot;border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;&quot;&gt;
+   1
+   &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;/table&gt;
+
+|
+
+
+.. class:: text-justify
+
+**Con estas especificaciones modele las clases que considere necesarias y cree una clase para representar el mundo, sus personajes y la batalla. No olvide que todas las salidas en pantalla deben finalizar con &quot;endl&quot;.**
+
+|
+
+REQUISITOS
+^^^^^^^^^^
+
+- Todos los personajes tienen un método Atacar() que recibe por referencia otro personaje al que le quitará puntos de vida
+
+- Si un personaje se queda sin vida, muere (con la exepción del Arqueros++).
+
+- La batalla termina cuando uno de los 2 ejércitos se quede sin sus luchadores.
+
+- Al final deberá mostrar la cantidad de personajes que quedaron en el ejército ganador.
+
+-Por cada ataque deberá mostrar personaje atacante (posicion en el ejercito). Personaje atacado (posicion en el ejercito).
+
+|
+
+**NOTA: estas son las salidas reales, siempre serán las mismas**
+
+*Salidas*
+^^^^^^^^^
+
+Ejercito 1 empieza con 7 Arqueros
+
+Ejercito 2 empieza con 7 Draconaurius
+
+El Arquero++ 1 ha atacado al Draconaurius++ 1
+
+El Arquero++ 1 ha atacado al Draconaurius++ 2
+
+El Arquero++ 1 ha atacado al Draconaurius++ 3
+
+El Arquero++ 1 ha atacado al Draconaurius++ 4
+
+El Arquero++ 1 ha atacado al Draconaurius++ 5
+
+El Arquero++ 1 ha atacado al Draconaurius 6
+
+El Arquero++ 1 ha atacado al Draconaurius 7
+
+Ejercito 1 gana, queda con 7 Arqueros
+
+|
+</li><li>environment: multiple_languages</li><li>evaluate: best</li><li>generate_grader: True</li><li>grader_diff_context_lines: 3</li><li>grader_diff_max_lines: 100</li><li>grader_problem_id: examen2</li><li>grader_test_cases: <ol><li><ul><li>weight: 1.0</li><li>diff_shown: True</li><li>input_file: 1.in</li><li>output_file: 1.out</li></ul></li></ol></li><li>groups: False</li><li>input_random: 0</li><li>limits: <ul><li>output: 2</li><li>time: 30</li><li>memory: 100</li></ul></li><li>name: Examen 2</li><li>network_grading: False</li><li>problems: <ul><li>examen2: <ul><li>name: </li><li>type: code_file_multiple_languages</li><li>languages: <ul><li>cpp: cpp</li></ul></li><li>allowed_exts: <ol><li>.zip</li></ol></li><li>header: </li></ul></li></ul></li><li>stored_submissions: 0</li><li>submission_limit: <ul><li>amount: -1</li><li>period: -1</li></ul></li><li>tags: <ul></ul></li><li>treat_non_zero_as_runtime_error: False</li><li>vhdl_entity: </li><li>weight: 1.0</li><li>order: 0</li></ul>

@@ -1,0 +1,100 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |
+    **Enunciado del problema**
+    --------------------------
+
+    Desarrolle un programa que permita apilar un número entero, si el número es par se debe eliminar de la pila, pero si el número es impar NO se elimina de la pila. La pila es: (1,22,3,5,0)
+
+    *Entradas*
+    ^^^^^^^^^^
+
+    .. class:: text-justify
+
+        La pila es: (1,22,3,5)
+
+    |
+
+    *Salidas*
+    ^^^^^^^^^
+
+    La salida debera ser  **stack**
+
+    |
+
+    **Recuerde usar el paradigma orientada a objetos (uso de clases y objetos).**
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada*
+
+
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida*
+
+            ::
+
+                Tamaño pila: 0
+                El numero: 1 se apilo
+                El numero NO se desapilo
+                Tamaño pila: 1
+
+                El numero: 22 se apilo
+                El numero se desapilo
+                Tamaño pila: 1
+
+                El numero: 3 se apilo
+                El numero NO se desapilo
+                Tamaño pila: 2
+
+                El numero: 5 se apilo
+                El numero NO se desapilo
+                Tamaño pila: 3
+
+
+    |
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: 009-ejervectores
+grader_test_cases:
+-   weight: 1.0
+    input_file: 1.in
+    diff_shown: true
+    output_file: 1.out
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Ejercicio 06 -  Apilar número entero
+network_grading: false
+order: 8
+problems:
+    009-ejervectores:
+        languages:
+            cpp: cpp
+        header: ''
+        allowed_exts:
+        - .zip
+        type: code_file_multiple_languages
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

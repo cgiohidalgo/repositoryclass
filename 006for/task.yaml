@@ -1,0 +1,117 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |-
+    **Enunciado del problema**
+    --------------------------
+
+    Escriba un programa para mostrar los años bisiestos  que se encuentran entre dos años dados.
+
+    |
+
+    *Entradas*
+    ^^^^^^^^^^
+
+    .. class:: text-justify
+
+        Su programa deberá leer dos números **cin >>**, ingresados por el teclado.
+
+    |
+
+    *Salidas*
+    ^^^^^^^^^
+
+    La salida debera indicar Años bisiestos entre dichos años: **cout <<**
+
+    |
+
+    NOTA
+    ^^^^^
+
+    -En la salida  del programa, al final debe llevar un espacio en el ultimo número (no debe tener salto de linea)
+
+    |
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 1*
+
+            ::
+
+                1975 2018
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 1*
+
+            ::
+
+                Años bisiestos entre dichos años: 1976 1980 1984 1988 1992 1996 2000 2004 2008 2012 2016
+
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 2*
+
+            ::
+
+                1893 2019
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 2*
+
+            ::
+
+                Años bisiestos entre dichos años: 1896 1904 1908 1912 1916 1920 1924 1928 1932 1936 1940 1944 1948 1952 1956 1960 1964 1968 1972 1976 1980 1984 1988 1992 1996 2000 2004 2008 2012 2016
+
+    |
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: 006for
+grader_test_cases:
+-   weight: 1.0
+    input_file: 2.in
+    output_file: 2.out
+    diff_shown: false
+-   diff_shown: true
+    weight: 1.0
+    input_file: 1.in
+    output_file: 1.out
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Ejercicio 05 - Repaso For
+network_grading: false
+order: 7
+problems:
+    006for:
+        name: ''
+        allowed_exts:
+        - .zip
+        header: ''
+        languages:
+            cpp: cpp
+        type: code_file_multiple_languages
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0
