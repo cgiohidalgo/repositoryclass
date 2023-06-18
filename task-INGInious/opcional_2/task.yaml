@@ -1,0 +1,37 @@
+accessible: false
+author: ''
+context: |-
+    El ejercicio es pilas con la ruta, el código base es
+    https://replit.com/@JMLM/PilasConRuta#tablero.cpp (solo carga el tablero). Los requerimientos son: uso de paso por punteros, implementar la relación conoce y uso de dos avatar al mismo tiempo.
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: '2'
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Opcional__2
+network_grading: false
+problems:
+    '2':
+        type: code_file_multiple_languages
+        name: ''
+        allowed_exts:
+        - .zip
+        languages:
+            cpp: cpp
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0
+order: 1

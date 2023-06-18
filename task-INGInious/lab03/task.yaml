@@ -1,0 +1,213 @@
+accessible: false
+author: ''
+context: |
+    .. raw:: html
+
+        <style> .help {color:#808000;} </style>
+
+    .. role:: help
+
+    .. class:: text-justify
+
+    **Objetivos de aprendizaje**
+
+    • Biblioteca estándar
+    • Relación “contiene”
+    • Refactorizar
+
+
+    .. class:: text-justify
+
+    **Enunciado**
+
+    Hay un tren con 6 vagones en una estación. En los vagones 2 y 4 se ha declarado una alarma por coronavirus. Necesitamos mover esos vagones al final del tren para aislarlos del resto. **El objetivo es** que queden en este orden antes de comenzar el viaje: 1,3,5,6,2,4. Por suerte, la estación posee, además de la vía
+    principal, dos ramales (a la izquierda y a la derecha) suficientemente largos para hacer maniobras. El tren puede moverse hacia adelante y hacia atrás, y cada vez que un vagón llegue a la intersección se puede separar del resto y decidir por cuál vía se mueve. La situación inicial es ésta:
+
+    .. raw:: html
+
+       <p align="center"><img width="450" src="https://i.postimg.cc/BvDPFf4j/tren1.jpg" alt="ecuacion"><br/><br/>
+       Figura No. 1: Situación inicial
+       </p>
+
+    Una situación intermedia posible, si retrocedemos una vez por la derecha y luego dos veces por la izquierda, es:
+
+    .. raw:: html
+
+       <p align="center"><img width="450" src="https://i.postimg.cc/KvH1s8YK/tren2.jpg" alt="ecuacion"><br/><br/>
+       Figura No. 2: Situación intermedia posible
+       </p>
+
+
+    Y la situación final debe ser esta:
+
+    .. raw:: html
+
+       <p align="center"><img width="450" src="https://i.postimg.cc/MTqHjc9L/tren3.jpg" alt="ecuacion"><br/><br/>
+       Figura No. 3: Situación final
+       </p>
+
+    .. class:: text-justify
+
+    **Requerimientos**
+
+    • El programa principal se lo doy hecho (ver abajo). **No lo pueden modificar.**
+    • Escriba la clase Vagon y la clase Via.
+    • Debe haber 6 objetos vagón y 3 objetos vía.
+    • El vagón solo debe tener dos atributos internos, que son su número y si transporta enfermos o no.
+    • Las vías conocen a los vagones y, como la relación es temporal, se pide que la clase Via tenga un vector de punteros a Vagon. Recuerde que la clase vector tiene 3 órdenes muy útiles para esta tarea:
+        • push_back() para introducir un vagón en la vía
+        • back() para averiguar el último vagón de la vía
+        • pop_back() para que elimine el último vagón de la vía.
+    • Trabaje con el grupo del proyecto.
+    • Unos días después de entregar este trabajo, cada grupo tendrá que evaluar el código de otro grupo que yo le voy a suministrar, en un replit (por medio del campus virtual) donde pueden hacer mejoras al código del otro grupo y escribirlas en el archivo main(). Hacer una buena evaluación y mejoras influye un 10% en la nota del grupo evaluador (no influye en la nota del grupo evaluado).
+
+
+    .. code-block:: c++
+
+        /*
+        Archivo: main.cpp
+        Autor: Victor Bucheli
+        Fecha creación: 2022-02-21
+        Fecha última modificación: 2022-02-21
+        Licencia: GNU-GPL
+        */
+
+        /* HISTORIA: hay un tren con 6 vagones numerados consecutivamente de izquierda a derecha, del 1 al 6. En los vagones 2 y 4 hay personas enfermas que conviene transportarlas pero aisladas de las demás. Para ello, vamos a mover estos vagones al final del tren. Por suerte, en la estación hay dos ramales (uno hacia la izquierda y otro hacia la derecha) que nos van a ayudar a hacer este movimiento de vagones.
+        */
+
+        #include "Via.h"
+        #include "Vagon.h"
+        #include <iostream>
+        using namespace std;
+
+
+        int main()
+        {
+          Via viaPrincipal;
+          Via ramalIzquierdo;
+          Via ramalDerecho;
+
+          // Situación inicial:
+          viaPrincipal.introducirVagon(new Vagon(1, false));  // TOMA PROPIEDAD
+          viaPrincipal.introducirVagon(new Vagon(2, true));  // TOMA PROPIEDAD
+          viaPrincipal.introducirVagon(new Vagon(3, false));  // TOMA PROPIEDAD
+          viaPrincipal.introducirVagon(new Vagon(4, true));  // TOMA PROPIEDAD
+          viaPrincipal.introducirVagon(new Vagon(5, false));  // TOMA PROPIEDAD
+          viaPrincipal.introducirVagon(new Vagon(6, false));  // TOMA PROPIEDAD
+          cout << "Al inicio: " << viaPrincipal.estadoActual() << endl;
+
+          //Movimientos para llegar a la solución:
+          viaPrincipal.retrocederPor(ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+          viaPrincipal.retrocederPor(ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+          viaPrincipal.retrocederPor(ramalDerecho);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+          viaPrincipal.retrocederPor(ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+          viaPrincipal.retrocederPor(ramalDerecho);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+          viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+          viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+          viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+          viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+          viaPrincipal.avanzarDesde(ramalDerecho);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+          viaPrincipal.avanzarDesde(ramalDerecho);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+
+          // Imprimir la solución:
+          viaPrincipal.estadoActual();
+          cout << "Al final:  " << viaPrincipal.estadoActual() << endl;
+          // cout << "Izquierdo:  " << ramalIzquierdo.estadoActual() << endl;
+          // cout << "Derecho:  " << ramalDerecho.estadoActual() << endl;
+          return 0;
+        }
+
+    .. class:: text-justify
+
+
+
+
+    **¿Qué se evalua?**
+
+    .. raw:: html
+
+        <ul>
+        <li><strong>REQUERIMIENTOS (20%):&nbsp;</strong>
+        <li><strong>ESTILO (20%):&nbsp;</strong>
+        <li><strong>PROGRAMACIÓN (30%):&nbsp;</strong>
+        <li><strong>COMPILACIÓN (10%):&nbsp;</strong>
+        <li><strong>EJECUCIÓN (10%):&nbsp;</strong>
+        <li><strong>EVALUACIÓN DE PARES (10%):&nbsp;</strong>
+
+        </ul>
+
+
+    |
+
+    **Casos de prueba**
+    -------------------
+
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entradas*
+
+            ::
+
+                para este ejercicio
+                no hay datos
+                de entrada
+
+        .. container:: col-md-6 text-justify
+
+            *Salidas*
+
+            ::
+
+                Al inicio: | 1 | 2 | 3 | 4 | 5 | 6 |
+                Al final:  | 1 | 3 | 5 | 6 | 2 | 4 |
+
+
+    |
+
+    .. raw:: html
+
+        <strong>Nota 1: </strong> <p><em><span style="color: #800000;">para ayudarle a visualizar todo correctamente, piense que el punto de intersección de las vías es el final de cada vía (el “back”).</span></em></p>
+
+        <strong>Nota 2: </strong> <p><em><span style="color: #800000;">no olvide escribir el destructor de la clase Via.</span></em></p>
+
+        <strong>Nota 3: </strong> <p><em><span style="color: #800000;">si algo funciona mal, no intente resolverlo modificando el main. Piense, más bien, cómo hacer que su código sea robusto.</span></em></p>
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: lab03
+grader_test_cases:
+-   weight: 1.0
+    input_file: 1.in
+    diff_shown: true
+    output_file: 1.out
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Laboratorio 3
+network_grading: false
+order: 22
+problems:
+    lab03:
+        type: code_file_multiple_languages
+        header: ''
+        allowed_exts:
+        - .zip
+        name: ''
+        languages:
+            cpp: cpp
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

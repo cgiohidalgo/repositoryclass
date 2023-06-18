@@ -1,0 +1,77 @@
+accessible: false
+author: ''
+context: |-
+    .. class:: text-justify
+
+    Enunciado del problema
+    --------------------------
+
+    .. class:: text-justify
+
+    Un lavadero de autos requiere implementar un sistema para sus clientes. Cada vez que se ingresa un auto se encola con el número de la placa; cuando un carro se entrega a su dueño, el sistema desencola el auto; el dueño del lavadero puede observar el siguiente carro a lavar y todos los autos que están pendientes por lavar.
+
+    Ahora realice lo siguiente:
+
+    1. Encole los autos con placas: ABC-123, CGE-435, WER-223 y AAA-785 e imprima los autos que están pendientes por lavar.
+    2. Desencole el auto con placas ABC-123, que se entregó a su dueño.
+    3. El dueño del lavadero quiere saber cuál es el siguiente auto a lavar.
+    4. Finalmente muestre todos los autos que están pendientes por lavar.
+
+    *Salidas*
+    ^^^^^^^^^^^
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 1*
+
+            ::
+
+                El auto ingreso correctamente
+                El auto ingreso correctamente
+                El auto ingreso correctamente
+                El auto ingreso correctamente
+                ABC-123, CGE-435, WER-223, AAA-785,
+                El auto se entrego a su dueño
+                Proximo auto a lavar: CGE-435
+                CGE-435, WER-223, AAA-785,
+
+    **Finalice todas las salidas con "endl" para generar un salto de línea, de lo contrario puede recibir el veredicto de respuesta incorrecta.**
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: repaso5
+grader_test_cases:
+-   weight: 1.0
+    input_file: 1.in
+    output_file: 1.out
+    diff_shown: false
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Repaso 5: Cola'
+network_grading: false
+order: 16
+problems:
+    repaso5:
+        type: code_file_multiple_languages
+        allowed_exts:
+        - .zip
+        name: ''
+        languages:
+            cpp: cpp
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

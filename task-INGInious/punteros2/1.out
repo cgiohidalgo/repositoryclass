@@ -1,0 +1,42 @@
+----- Parámetros por referencia -----
+Temperatura argumento (fahrenheit) antes: 32
+Temperatura argumento (referencia): 42
+Temperatura argumento (referencia): 52
+Temperatura argumento (referencia): 62
+Temperatura argumento (referencia): 72
+Temperatura argumento (referencia): 82
+Temperatura argumento (referencia): 92
+Temperatura argumento (referencia): 102
+Temperatura argumento (referencia): 112
+Temperatura argumento (referencia): 122
+Temperatura argumento (referencia): 132
+Temperatura argumento (referencia): 142
+Temperatura argumento (referencia): 152
+Temperatura argumento (referencia): 162
+Temperatura argumento (referencia): 172
+Temperatura argumento (referencia): 182
+Temperatura argumento (referencia): 192
+Temperatura argumento (referencia): 202
+Temperatura argumento (referencia): 212
+Temperatura argumento (fahrenheit) después: 212
+----- Parámetros por puntero -----
+Temperatura argumento (fahrenheit) antes: 32
+Temperatura argumento (puntero): 42
+Temperatura argumento (puntero): 52
+Temperatura argumento (puntero): 62
+Temperatura argumento (puntero): 72
+Temperatura argumento (puntero): 82
+Temperatura argumento (puntero): 92
+Temperatura argumento (puntero): 102
+Temperatura argumento (puntero): 112
+Temperatura argumento (puntero): 122
+Temperatura argumento (puntero): 132
+Temperatura argumento (puntero): 142
+Temperatura argumento (puntero): 152
+Temperatura argumento (puntero): 162
+Temperatura argumento (puntero): 172
+Temperatura argumento (puntero): 182
+Temperatura argumento (puntero): 192
+Temperatura argumento (puntero): 202
+Temperatura argumento (puntero): 212
+Temperatura argumento (fahrenheit) después: 212

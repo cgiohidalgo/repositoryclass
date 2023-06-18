@@ -1,0 +1,87 @@
+accessible: false
+author: ''
+context: |
+    .. raw:: html
+
+        <style> .help {color:#808000;} </style>
+
+    .. role:: help
+
+    .. class:: text-justify
+
+    **Enunciado**
+
+    Genere un arreglo de tamaño 10 con números reales leídos desde teclado. Calcule el promedio e indique cuántos elementos del arreglo son mayores que el promedio y cuántos menores o iguales.
+
+    |
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada Ejemplo 1*
+
+            ::
+
+                70
+                50
+                6.4
+                5.7
+                34.7
+                56.7
+                10.5
+                80
+                4.6
+                9.6
+
+        .. container:: col-md-6 text-justify
+
+            *Salida Ejemplo 1*
+
+            ::
+
+                32.82
+                5
+                5
+
+    |
+
+
+    **La salida debe tener un caracter de nueva linea al final del archivo, de lo contrario puede recibir el veredicto de respuesta incorrecta.**
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: repaso3
+grader_test_cases:
+-   weight: 1.0
+    input_file: 1.in
+    diff_shown: true
+    output_file: 1.out
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Repaso 3: promedio'
+network_grading: false
+order: 14
+problems:
+    repaso3:
+        allowed_exts:
+        - .zip
+        name: ''
+        header: ''
+        type: code_file_multiple_languages
+        languages:
+            cpp: cpp
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

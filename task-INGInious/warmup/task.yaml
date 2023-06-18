@@ -1,0 +1,79 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |-
+    .. class:: text-justify
+
+    Enunciado del problema
+    --------------------------
+
+    .. class:: text-justify
+
+    Desarrollar un programa que muestre en las tablas de multiplicar, de cero(0) a cinco(5)
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada*
+
+            ::
+
+                   para este ejemplo no hay datos de entrada
+
+
+        .. container:: col-md-6 text-justify
+
+            *Salida*
+
+            ::
+
+                        0   1   2   3   4   5
+                    0   0   0   0   0   0   0
+                    1   0   1   2   3   4   5
+                    2   0   2   4   6   8   10
+                    3   0   3   6   9   12  15
+                    4   0   4   8   12  16  20
+                    5   0   5   10  15  20  25
+
+
+    **Finalice el último "cout" con "endl" para generar un salto de línea, de lo contrario puede recibir el veredicto de respuesta incorrecta.**
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: uno
+grader_test_cases:
+-   weight: 1.0
+    input_file: 1.in
+    diff_shown: true
+    output_file: 1.out
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    memory: '100'
+    time: '30'
+name: Ejercicio 00 - warmup
+network_grading: false
+order: 2
+problems:
+    uno:
+        header: ''
+        allowed_exts:
+        - .zip
+        languages:
+            cpp: cpp
+        type: code_file_multiple_languages
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

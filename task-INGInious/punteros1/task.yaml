@@ -1,0 +1,131 @@
+accessible: false
+author: Giovanny Hidalgo, Victor Bucheli, José Llanos
+context: |-
+    **Enunciado del problema**
+    --------------------------
+
+    Escriba un programa  que reciba la dirección de inicio de una cadena de caracteres y devuelva el número de vocales que hay en la cadena.
+
+    |
+
+    *Entradas*
+    ^^^^^^^^^^
+
+    .. class:: text-justify
+
+       deberá leer una frase por consola
+
+    |
+
+    *Salidas*
+    ^^^^^^^^^
+
+    La salida deberá indicar el número de vocales en la frase
+
+    |
+
+    **Casos de prueba**
+    -------------------
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada 1*
+
+            ::
+
+                hola
+
+        .. container:: col-md-6 text-justify
+
+            *Salida 1*
+
+            ::
+
+                2
+
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada 2*
+
+            ::
+
+                hola como tu estas
+
+        .. container:: col-md-6 text-justify
+
+            *Salida 2*
+
+            ::
+
+                7
+
+    .. container:: row
+
+        .. container:: col-md-6 text-justify
+
+            *Entrada 2*
+
+            ::
+
+                quien esta de mi lado?
+
+        .. container:: col-md-6 text-justify
+
+            *Salida 2*
+
+            ::
+
+                ?
+
+
+    |
+environment: multiple_languages
+evaluate: best
+generate_grader: true
+grader_diff_context_lines: 3
+grader_diff_max_lines: 100
+grader_problem_id: punteros1
+grader_test_cases:
+-   output_file: 1.out
+    weight: 1.0
+    input_file: 1.in
+    diff_shown: false
+-   weight: 1.0
+    input_file: 2.in
+    output_file: 2.out
+    diff_shown: false
+-   weight: 1.0
+    input_file: 3.in
+    output_file: 3.out
+    diff_shown: false
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Punteros 1
+network_grading: false
+order: 19
+problems:
+    punteros1:
+        allowed_exts:
+        - .zip
+        languages:
+            cpp: cpp
+        name: ''
+        type: code_file_multiple_languages
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+treat_non_zero_as_runtime_error: false
+vhdl_entity: ''
+weight: 1.0

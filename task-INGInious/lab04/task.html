@@ -1,0 +1,115 @@
+<ul><li>accessible: False</li><li>author: </li><li>context: .. raw:: html
+
+    &lt;style&gt; .help {color:#808000;} &lt;/style&gt;
+
+.. role:: help
+
+.. class:: text-justify
+
+**Objetivos de aprendizaje**
+
+• Relaciones “es un” usando herencia
+• Polimorfismo (sirve, dicho rápidamente, para eliminar if)
+• Refactorizar código
+
+
+.. class:: text-justify
+
+**Enunciado**
+
+Estamos en el concurso de televisión ¿Quieres ser trillonario? Los ganadores están en fila para recibir el premio y también hay una fila de presentadores para entregarlos. Hay distintos tipos de presentadores:
+
+- El presentador de ideas fijas: siempre da como premio 100 bitcoins.
+
+- El presentador aleatorio: entrega una cantidad al azar entre 0 y 300.
+
+- El presentador loco: el premio es el número de letras de su nombre multiplicado por 200.
+
+Supongamos que en la fila de ganadores están: primero Sofía, luego luego Esteban, Antonio, Rosita, Ana y Rosendo. Y en la fila de presentadores entregando premios primero hay un ideasFijas, luego un loco, luego aleatorio, y luego otro aleatorio. Cuando se acaban los presentadores y se necesitan más, se vuelve a comenzar desde el primero. Después de la entrega de premios, cada concursante dice lo que le dieron de premio.
+
+**Código base**
+
+Les doy hechos el programa principal y las clases. Pero allí no hay herencia ni polimorfismo. El objetivo es que refactoricen el código para lograr polimorfismo.
+
+enlace: https://replit.com/@CARLOSGIOVANNYG/lab04?v=1
+
+
+
+.. class:: text-justify
+
+**Requerimientos**
+
+• Trabaje con el grupo del proyecto.
+• El PresentadorDeIdeasFijas es un Presentador.
+• El PresentadorAleatorio es un Presentador.
+• El PresentadorLoco es un Presentador.
+• Hay que lograr polimorfismo sobre la clase Presentador, de modo que sea fácil añadir más presentadores con nuevos comportamientos.
+• También les doy el nuevo main.cpp que no se puede modificar. https://replit.com/@CARLOSGIOVANNYG/nuevomain#main.cpp
+• Solo se pueden imprimir en pantalla desde main().
+• Cuando terminen, además de las nuevas clases, deben entregar también un archivo .txt (dentro del código) con la respuesta a las siguientes preguntas:
+
+**Preguntas que debe reponder**
+
+1. ¿Qué ocurre si elimino todas las palabras virtual? (Cambien en la función virtual pura =0 por {return 0;} para que no dé error al compilar). ¿Por qué ocurre eso?
+
+2. Tengo un nuevo PresentadorTemporal (descargarlo de https://drive.google.com/file/d/1eHOo6NVpwG4cN1Ms_R0Kid7p0PSMbrpn/view?usp=sharing), que hereda de Presentador, y tiene un nuevo comportamiento, pues los bitcoins que entrega son \100 multiplicados por los minutos de la hora actual. Añádalo a su programa, poniéndolo el último de la fila de presentadores. ¿Qué archivos tiene que modificar? ¿Por qué?
+
+3. Añada de la misma manera este PresentadorTemporal al programa original (el que no tiene polimorfismo). ¿Qué archivos tiene que modificar? ¿Por qué?
+
+4. Comparando la solución 2 y 3 diga cual es la ventaja del polimorfismo.
+
+.. class:: text-justify
+
+**¿Qué se evalua?**
+
+.. raw:: html
+
+    &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;REQUERIMIENTOS (20%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;ESTILO (20%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;PROGRAMACIÓN (30%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;COMPILACIÓN (10%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;EJECUCIÓN (10%):&amp;nbsp;&lt;/strong&gt;
+    &lt;li&gt;&lt;strong&gt;VENTAJAS DEL POLIMORFISMO (10%):&amp;nbsp;&lt;/strong&gt;
+
+    &lt;/ul&gt;
+
+
+|
+
+**Casos de prueba**
+-------------------
+
+
+.. container:: row
+
+    .. container:: col-md-6 text-justify
+
+        *Entrada*
+
+        ::
+
+            para este ejercicio
+            no hay datos
+            de entrada
+
+    .. container:: col-md-6 text-justify
+
+        *Posible salida*
+
+        ::
+
+            Sofia gano 100.000000 bitcoins
+            Esteban gano 800.000000 bitcoins
+            Antonio gano 144.000000 bitcoins
+            Rosita gano 197.000000 bitcoins
+            Ana gano 100.000000 bitcoins
+            Rosendo gano 800.000000 bitcoins
+
+
+|
+
+.. raw:: html
+
+    &lt;strong&gt;Nota 1: &lt;/strong&gt; &lt;p&gt;&lt;em&gt;&lt;span style=&quot;color: #800000;&quot;&gt;En la salida de su programa puede que no le de los mismos valores en los ganadores 3,4. No se preocupe si no aparece en verde su envio.&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+</li><li>environment: multiple_languages</li><li>evaluate: best</li><li>generate_grader: True</li><li>grader_diff_context_lines: 3</li><li>grader_diff_max_lines: 100</li><li>grader_problem_id: lab04</li><li>grader_test_cases: <ol><li><ul><li>weight: 1.0</li><li>input_file: 1.in</li><li>diff_shown: True</li><li>output_file: 1.out</li></ul></li></ol></li><li>groups: False</li><li>input_random: 0</li><li>limits: <ul><li>output: 2</li><li>time: 30</li><li>memory: 100</li></ul></li><li>name: Laboratorio 4</li><li>network_grading: False</li><li>order: 23</li><li>problems: <ul><li>lab04: <ul><li>header: </li><li>allowed_exts: <ol><li>.zip</li></ol></li><li>name: </li><li>languages: <ul><li>cpp: cpp</li></ul></li><li>type: code_file_multiple_languages</li></ul></li></ul></li><li>stored_submissions: 0</li><li>submission_limit: <ul><li>amount: -1</li><li>period: -1</li></ul></li><li>tags: <ul></ul></li><li>treat_non_zero_as_runtime_error: False</li><li>vhdl_entity: </li><li>weight: 1.0</li></ul>
